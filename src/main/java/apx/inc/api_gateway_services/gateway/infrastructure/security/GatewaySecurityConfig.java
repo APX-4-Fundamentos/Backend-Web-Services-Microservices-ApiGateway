@@ -32,7 +32,8 @@ public class GatewaySecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(List.of(
-                "http://localhost:4200")); // Nota de Sebastián: Añadir el link de despliegue, NO AÑADIR CORS A LOS MICROSERVICIOS
+                "http://localhost:4200",
+                "https://funda-frontend-web-applications.vercel.app"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true);
